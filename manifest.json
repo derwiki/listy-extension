@@ -9,18 +9,11 @@
       "js": [ "jquery-2.0.3.js" ]
     }
   ],
-  "permissions": [ "tabs", "http://*/*" ],
+  "permissions": [ "tabs", "http://*.apartmentlist.com/*" ],
   "page_action": {
     "default_icon": "listy38.png",
-    "default_title": "LDP Form Filler"
+    "default_title": "Fill out referral form"
   },
-  "icons": {
-    "48": "listy38.png"
-  },
-  "web_accessible_resources": [
-    "ldp.js",
-    "jquery-2.0.3.js"
-  ],
   "background": {
     "scripts": [ "background.js" ]
   }

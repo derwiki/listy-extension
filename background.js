@@ -1,9 +1,11 @@
-function listener(id, info, tab) {
+// determine if button should be displayed
+chrome.tabs.onUpdated.addListener(function(id, info, tab) {
   if (tab.url.toLowerCase().indexOf("apartmentlist.com") !== -1) {
     chrome.pageAction.show(tab.id);
   }
-}
-chrome.tabs.onUpdated.addListener(listener);
+});
+
+// action after button click
 chrome.pageAction.onClicked.addListener(function(tab) {
     chrome.tabs.executeScript(null, { "file": "ldp.js" });
 });
