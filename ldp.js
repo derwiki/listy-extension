@@ -1,3 +1,4 @@
+chrome.runtime.onMessage.addListener(function() {
   $('#full_name').val('Test Test');
   $('#email').val('test@test.com');
   $('#phone').val('216-368-3457');
@@ -10,3 +11,4 @@
    join('/');
   $('input.movein_date').val(dateString);
   $('.availability-form .submit').click();
+});

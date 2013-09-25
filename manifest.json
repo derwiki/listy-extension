@@ -5,20 +5,16 @@
   "description": "Fill in test data",
   "content_scripts": [
     {
-      "matches": ["http://mfind.apartmentlist.com/ldp*"],
-      "js": [ "jquery-2.0.3.js", "ldp.js" ],
-      "run_at": "document_idle"
+      "matches": ["http://mfind.apartmentlist.com/*"],
+      "js": [ "jquery-2.0.3.js", "ldp.js" ]
     }
   ],
-  "page_action": {
-    "default_icon": {
-      "38": "listy38.png"
-    },
+  "browser_action": {
+    "default_icon": "listy38.png",
     "default_title": "LDP Form Filler"
   },
   "web_accessible_resources": [
     "ldp.js",
-    "background.js",
     "jquery-2.0.3.js"
   ],
   "background": {
